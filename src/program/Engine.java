@@ -1,6 +1,8 @@
 package program;
 
 import entities.BrazilInterestService;
+import entities.InterestService;
+import entities.UsaInterestService;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -15,12 +17,13 @@ public class Engine {
         System.out.print("Months: ");
         int month = sc.nextInt();
 
-        BrazilInterestService is = new BrazilInterestService(2.0);
+        InterestService is = new BrazilInterestService(2.0);
         double payment = is.payment(amount , month);
 
         System.out.println("Payment after " + month + " months:");
         System.out.println(String.format("%.2f", payment));
 
+        
 
 
         sc.close();
